@@ -1,0 +1,41 @@
+<!-- This tells the browser what type of file to expect and how to read it -->
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>Puppy.VueJs</title>
+	<!--fontawesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<!-- The href in the link tag below contains the relative file path leading to our main.css stylesheet. From this document, our index.html, the browser knows to look for something called "css" and then to go inside of that folder and look for something called "main.css" -->
+	<link rel="stylesheet" href="css/main.css">
+	<!--bootstrap link-->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+
+
+</head>
+<body>
+			<div id="app">
+					<div v-for="puppy in puppies">
+							<h1>{{ puppy.name }}</h1>
+							<img v-bind:src="puppy.image" v-bind:alt="puppy.name" style="border: 5px solid black; width: 50%; margin: auto; ">
+							<h2 style="text-align: center;"> BREED: {{ puppy.breed }}</h2>
+							<h2 style="text-align: center;">GENDER: {{ puppy.gender }}</h2>
+							<h2 style="text-align: center;">AGE: {{ puppy.age }} years</h2>
+							<h2 style="text-align: center;">WEIGHT: {{ puppy.weightKG }} pounds</h2>
+					</div>
+			</div>
+
+
+<!--jquery-->
+<script src="http://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+
+
+<!--javascript-->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
